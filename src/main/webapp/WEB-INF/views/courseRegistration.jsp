@@ -23,7 +23,6 @@
     </div>
 
 </div>
-<!-- <div id="testsidebar">Hello World </div> -->
 <div class="container">
     <div class="sidenav">
 
@@ -32,30 +31,28 @@
         <div class="dropdown-container">
             <a href="/course/registration">Course Registration </a>
             <a href="/student/registration">Student Registration </a>
-            <a href="STU003.html">Student Search </a>
+            <a href="/student/search">Student Search </a>
         </div>
         <a href="/user/management">Users Management</a>
     </div>
     <div class="main_contents">
         <div id="sub_content">
-            <form>
-
+            <form action="/course/registration" method="post">
             <h2 class="col-md-6 offset-md-2 mb-5 mt-4">Course Registration</h2>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="id" class="col-md-2 col-form-label"> ID</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" id="id" placeholder="COU001">
+                    <input type="text" class="form-control" id="id" name="id" placeholder="eg. COU001" required>
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="name" class="col-md-2 col-form-label">Name</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" id="name" placeholder="Java Web Development">
+                    <input type="text" class="form-control" id="name" name="name" placeholder="eg. Java Web Development" required>
                 </div>
             </div>
-
 
             <div class="row mb-4">
                 <div class="col-md-4"></div>
@@ -71,7 +68,7 @@
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h5 style="color: rgb(127, 209, 131);">Registered Succesfully !</h5>
+                                    <h5 style="color: rgb(127, 209, 131);">${message}</h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-success col-md-2" data-bs-dismiss="modal">Ok</button>
@@ -88,23 +85,7 @@
     <div id="testfooter">
         <span>Copyright &#169; ACE Inspiration 2022</span>
     </div>
-    <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-    </script>
 <jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>

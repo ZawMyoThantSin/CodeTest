@@ -41,41 +41,49 @@
     <div class="main_contents">
         <div id="sub_content">
             <form>
+             <h2 class="col-md-6 offset-md-2 mb-5 mt-4">User Registration</h2>
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="name" class="col-md-2 col-form-label">Name</label>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control" id="name" placeholder="Your Name...">
+                    </div>
+                </div>
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="email" class="col-md-2 col-form-label">Email</label>
+                    <div class="col-md-4">
+                        <input type="email" class="form-control" id="email" value="user123@gmail.com">
+                    </div>
+                </div>
 
-            <h2 class="col-md-6 offset-md-2 mb-5 mt-4">User Registration</h2>
-            <div class="row mb-4">
-                <div class="col-md-2"></div>
-                <label for="email" class="col-md-2 col-form-label">Email</label>
-                <div class="col-md-4">
-                    <input type="email" class="form-control" id="email" value="user123@gmail.com">
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="password" class="col-md-2 col-form-label">Passowrd</label>
+                    <div class="col-md-4">
+                        <input type="password" class="form-control" id="password"  required>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-2"></div>
-                <label for="passowrd" class="col-md-2 col-form-label">Passowrd</label>
-                <div class="col-md-4">
-                    <input type="password" class="form-control" id="name" value="user123">
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="confirmPassword" class="col-md-2 col-form-label">Confirm Passowrd</label>
+                    <div class="col-md-4">
+                        <input type="password" class="form-control" id="confirmPassword" oninput="checkPassword()" required>
+                        <p id="message"></p>
+                    </div>
                 </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-2"></div>
-                <label for="confirmPassword" class="col-md-2 col-form-label">Confirm Passowrd</label>
-                <div class="col-md-4">
-                    <input type="password" class="form-control" id="confirmPassword" value="user123">
-                </div>
-            </div>
-            <div class="row mb-4">
-                <div class="col-md-2"></div>
-                <label for="userRole" class="col-md-2 col-form-label">User Role</label>
-                <div class="col-md-4">
-                    <select class="form-select" aria-label="Education" id="userRole">
-                        <option selected>Admin</option>
-                        <option value="1">User</option>
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="userRole" class="col-md-2 col-form-label">User Role</label>
+                    <div class="col-md-4">
+                        <select class="form-select" aria-label="Education" id="userRole">
+                            <option selected>Admin</option>
+                            <option value="1">User</option>
 
 
-                    </select>
+                        </select>
+                    </div>
                 </div>
-            </div>
             <div class="row mb-4">
                 <div class="col-md-4"></div>
 
@@ -112,23 +120,20 @@
     <div id="testfooter">
         <span>Copyright &#169; ACE Inspiration 2022</span>
     </div>
-    <script>
-        /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-        var dropdown = document.getElementsByClassName("dropdown-btn");
-        var i;
+<script>
+    function checkPassword() {
+        var password = document.getElementById("password").value;
+        var confirm_password = document.getElementById("confirmPassword").value;
+        var message = document.getElementById("message");
 
-        for (i = 0; i < dropdown.length; i++) {
-            dropdown[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
+        if (password === confirm_password) {
+            message.innerHTML="";
+        } else {
+            message.innerHTML = "Passwords do not match. Please try again.";
         }
-    </script>
+    }
+</script>
+
 <jsp:include page="../fragments/footer.jsp"/>
 </body>
 

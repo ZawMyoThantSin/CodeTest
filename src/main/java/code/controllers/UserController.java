@@ -18,4 +18,10 @@ public class UserController {
         model.addAttribute("date",formattedDate);
         return "user/userManage";
     }
+    @GetMapping("/user/update")
+    public String userUpdate(Model model){
+        model.addAttribute("date",formattedDate);
+        return "user/userUpdate";
+    }
+
 }
