@@ -3,24 +3,27 @@ package code.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 @Controller
 public class UserController {
-    Date myDate = new Date();
-    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-    String formattedDate = sdf.format(myDate);
+    @GetMapping("/user/registration")
+    public String userRegistration(){
+
+        return "user/userRegistration";
+    }
 
     @GetMapping("/user/management")
     public String userManagement(Model model){
-        model.addAttribute("date",formattedDate);
+
         return "user/userManage";
     }
     @GetMapping("/user/update")
     public String userUpdate(Model model){
-        model.addAttribute("date",formattedDate);
+
         return "user/userUpdate";
     }
 

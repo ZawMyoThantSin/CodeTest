@@ -12,9 +12,5 @@ public class Registration {
 
 
 
-    @GetMapping("/user/registration")
-    public String userRegistration(Model model){
 
-        return "user/userRegistration";
-    }
 }
