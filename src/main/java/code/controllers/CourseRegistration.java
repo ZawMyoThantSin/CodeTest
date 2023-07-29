@@ -18,19 +18,10 @@ public class CourseRegistration {
     }
 
     @PostMapping("/course/registration")
-    public String courseRegistration(Model model, @RequestParam String id, String name){
+    public String courseRegistration( @RequestParam String id, String name){
         if (id != null && name != null){
         Course courses = new Course(id,name);
-        int status = new CourseDao().courseCreate(courses);
-        if(status==1){
-            String message ="Registered Succesfully !";
-            model.addAttribute("message",message);
-             return "courseRegistration";
-        }else {
-            String message = "Error Create Course! Please try Again...";
-            model.addAttribute("message", message);
-            return "courseRegistration";
-        }
+        new CourseDao().courseCreate(courses);
         }
         return "courseRegistration";
     }

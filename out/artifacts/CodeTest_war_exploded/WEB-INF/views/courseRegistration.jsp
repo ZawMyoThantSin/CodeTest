@@ -68,7 +68,7 @@
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <h5 style="color: rgb(127, 209, 131);">${message}</h5>
+                                    <h5 style="color: rgb(127, 209, 131);">Registered Succesfully !</h5>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-success col-md-2" data-bs-dismiss="modal">Ok</button>

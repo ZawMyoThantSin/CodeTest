@@ -2,20 +2,22 @@ package code.models;
 
 public class User {
     private int id;
-    private String name,email,password,role;
+    private String userId,name,email,password,role;
 
     public User() {
     }
 
-    public User(int id, String name, String email, String password, String role) {
+    public User(int id, String userId, String name, String email, String password, String role) {
         this.id = id;
+        this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
         this.role = role;
     }
 
-    public User(String name, String email, String password, String role) {
+    public User(String userId, String name, String email, String password, String role) {
+        this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;
@@ -28,6 +30,14 @@ public class User {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {

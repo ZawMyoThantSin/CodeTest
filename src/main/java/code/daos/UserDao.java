@@ -11,16 +11,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class UserDao {
+
     public int userCreate(User user){
         int status = 0;
+
         Connection con = DBHelper.getInstance().getConnection();
-        String query = "INSERT INTO users (name,email,password,roles) VALUES(?,?,?,?)";
+        String query = "INSERT INTO users (userId,username,email,password,roles) VALUES(?,?,?,?,?)";
         try {
             PreparedStatement ps = con.prepareStatement(query);
-            ps.setString(1,user.getName());
-            ps.setString(2,user.getEmail());
-            ps.setString(3,user.getPassword());
-            ps.setString(4,user.getRole());
+            ps.setString(1,user.getUserId());
+            ps.setString(2,user.getName());
+            ps.setString(3,user.getEmail());
+            ps.setString(4,user.getPassword());
+            ps.setString(5,user.getRole());
             status =ps.executeUpdate();
         } catch (SQLException e) {
             System.out.println("Database error delete"+e);
@@ -38,7 +41,8 @@ public class UserDao {
             rs=ps.executeQuery();
             while(rs.next()){
                 User user=new User();
-                user.setId(rs.getInt("userId"));
+                user.setId(rs.getInt("id"));
+                user.setUserId(rs.getString("userId"));
                 user.setName(rs.getString("name"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
@@ -62,7 +66,8 @@ public class UserDao {
             rs=ps.executeQuery();
             while(rs.next()){
 
-                user.setId(rs.getInt("userId"));
+                user.setId(rs.getInt("id"));
+                user.setUserId(rs.getString("userId"));
                 user.setName(rs.getString("name"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));

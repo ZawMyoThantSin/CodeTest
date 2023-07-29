@@ -39,20 +39,27 @@
     </div>
     <div class="main_contents">
         <div id="sub_content">
-            <form>
+            <form action="/user/registration" method="post">
              <h2 class="col-md-6 offset-md-2 mb-5 mt-4">User Registration</h2>
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="id" class="col-md-2 col-form-label">User Id</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="id" name="id" placeholder="eg. USR001">
+                    </div>
+                </div>
                 <div class="row mb-4">
                     <div class="col-md-2"></div>
                     <label for="name" class="col-md-2 col-form-label">Name</label>
                     <div class="col-md-4">
-                        <input type="email" class="form-control" id="name" placeholder="Your Name...">
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your Name...">
                     </div>
                 </div>
                 <div class="row mb-4">
                     <div class="col-md-2"></div>
                     <label for="email" class="col-md-2 col-form-label">Email</label>
                     <div class="col-md-4">
-                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
+                        <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
                     </div>
                 </div>
 
@@ -60,7 +67,7 @@
                     <div class="col-md-2"></div>
                     <label for="password" class="col-md-2 col-form-label">Passowrd</label>
                     <div class="col-md-4">
-                        <input type="password" class="form-control" id="password"  required>
+                        <input type="password" class="form-control" id="password" name="password" required>
                     </div>
                 </div>
                 <div class="row mb-4">
@@ -75,11 +82,9 @@
                     <div class="col-md-2"></div>
                     <label for="userRole" class="col-md-2 col-form-label">User Role</label>
                     <div class="col-md-4">
-                        <select class="form-select" aria-label="Education" id="userRole">
+                        <select class="form-select" aria-label="Education" id="userRole" name="userRole">
                             <option selected value="Admin">Admin</option>
                             <option value="User">User</option>
-
-
                         </select>
                     </div>
                 </div>
