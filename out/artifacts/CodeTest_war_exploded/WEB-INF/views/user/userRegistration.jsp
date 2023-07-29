@@ -12,10 +12,9 @@
     <div class="container">
         <div class=row>
             <div class="col-md-5 ">
-                <a href="/student/registration"><h3>Student Registration</h3></a>
+
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >
@@ -32,11 +31,11 @@
         <button class="dropdown-btn" > Class Management <i class="fa fa-caret-down"></i></button>
 
         <div class="dropdown-container">
-            <a href="/course/registration">Course Registration </a>
-            <a href="/student/registration">Student Registration </a>
-            <a href="/student/search">Student Search </a>
+            <a href="#">Course Registration </a>
+            <a href="#">Student Registration </a>
+            <a href="#">Student Search </a>
         </div>
-        <a href="/user/management">Users Management</a>
+        <a href="#">Users Management</a>
     </div>
     <div class="main_contents">
         <div id="sub_content">
@@ -53,7 +52,7 @@
                     <div class="col-md-2"></div>
                     <label for="email" class="col-md-2 col-form-label">Email</label>
                     <div class="col-md-4">
-                        <input type="email" class="form-control" id="email" value="user123@gmail.com">
+                        <input type="email" class="form-control" id="email" placeholder="example@gmail.com">
                     </div>
                 </div>
 
@@ -77,8 +76,8 @@
                     <label for="userRole" class="col-md-2 col-form-label">User Role</label>
                     <div class="col-md-4">
                         <select class="form-select" aria-label="Education" id="userRole">
-                            <option selected>Admin</option>
-                            <option value="1">User</option>
+                            <option selected value="Admin">Admin</option>
+                            <option value="User">User</option>
 
 
                         </select>

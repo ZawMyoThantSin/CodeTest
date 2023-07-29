@@ -12,10 +12,9 @@
     <div class="container">
         <div class=row>
             <div class="col-md-5 ">
-                <a href="/student/registration"><h3>Student Registration</h3></a>
+
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >

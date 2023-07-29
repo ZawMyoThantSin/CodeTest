@@ -116,12 +116,7 @@
                             PFC
                         </label>
                     </div>
-                    <div class="form-check-inline col-md-2">
-                        <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
-                        <label class="form-check-label" for="gridRadios2">
-                            JWD
-                        </label>
-                    </div>
+
                     <div class="form-check-inline col-md-2">
                         <input class="form-check-input" type="checkbox" name="gridRadios" id="gridRadios2" value="option2">
                         <label class="form-check-label" for="gridRadios2">
