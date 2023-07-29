@@ -19,6 +19,7 @@ public class UserController {
     public String userRegistration(@RequestParam String id,String name,String email,String password,String userRole){
         User user = new User(id,name,email,password,userRole);
         new UserDao().userCreate(user);
+
         return "user/userRegistration";
     }
 

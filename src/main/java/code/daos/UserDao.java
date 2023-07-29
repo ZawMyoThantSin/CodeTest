@@ -2,7 +2,6 @@ package code.daos;
 
 import code.helper.DBHelper;
 import code.models.User;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -14,7 +13,6 @@ public class UserDao {
 
     public int userCreate(User user){
         int status = 0;
-
         Connection con = DBHelper.getInstance().getConnection();
         String query = "INSERT INTO users (userId,username,email,password,roles) VALUES(?,?,?,?,?)";
         try {
@@ -29,6 +27,32 @@ public class UserDao {
             System.out.println("Database error delete"+e);
         }
         return status;
+    }
+
+    public User isValidUser(String userId, String password) {
+        Connection connection = DBHelper.getInstance().getConnection();
+        String query = "SELECT * FROM users WHERE userId = ? AND password = ?";
+        try (
+             PreparedStatement statement = connection.prepareStatement(query)) {
+            statement.setString(1, userId);
+            statement.setString(2, password);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    User user = new User();
+                    user.setUserId(resultSet.getString("userId"));
+                    user.setName(resultSet.getString("username"));
+                    user.setEmail(resultSet.getString("email"));
+                    user.setPassword(resultSet.getString("password"));
+                    user.setRole(resultSet.getString("roles"));
+
+                    return user;
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+
     }
 
     public List<User> getAllUser(){
@@ -96,7 +120,6 @@ public class UserDao {
 
         return status;
     }
-
 
     public int userDelete(int id){
         int status = 0;

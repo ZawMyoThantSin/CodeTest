@@ -98,7 +98,6 @@
                         <td>Java</td>
                         <td>
                             <a href="/student/details"><button type="submit" class="btn btn-secondary mb-2">See More</button></a>
-                            <!-- <a href="STU002.html" class="text-decoration-none">See more</a> -->
                         </td>
                     </tr>
                     </tbody>
