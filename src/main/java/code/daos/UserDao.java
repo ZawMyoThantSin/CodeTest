@@ -1,7 +1,9 @@
 package code.daos;
-
 import code.helper.DBHelper;
 import code.models.User;
+import code.models.UserView;
+import org.springframework.stereotype.Component;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -9,6 +11,7 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
+@Component
 public class UserDao {
 
     public int userCreate(User user){
@@ -55,8 +58,8 @@ public class UserDao {
 
     public List<User> getAllUser(){
         ResultSet rs;
-        List<User> users=new ArrayList<>();
-        String query="SELECT * FROM user";
+        List<User> users = new ArrayList<>();
+        String query="SELECT * FROM users";
         Connection con = DBHelper.getInstance().getConnection();
         try {
             PreparedStatement ps=con.prepareStatement(query);
@@ -65,7 +68,7 @@ public class UserDao {
                 User user=new User();
                 user.setId(rs.getInt("id"));
                 user.setUserId(rs.getString("userId"));
-                user.setName(rs.getString("name"));
+                user.setName(rs.getString("username"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
                 user.setRole(rs.getString("roles"));
@@ -77,6 +80,29 @@ public class UserDao {
         return users;
     }
 
+    public List<UserView> getUserForView(){
+        List<UserView> users = new ArrayList<>();
+        ResultSet rs;
+        Connection con = DBHelper.getInstance().getConnection();
+        String query="SELECT * FROM users";
+        try {
+            PreparedStatement ps=con.prepareStatement(query);
+            rs=ps.executeQuery();
+            while(rs.next()){
+                UserView user1=new UserView();
+                user1.setId(rs.getInt("id"));
+                user1.setUser_id(rs.getString("userId"));
+                user1.setUser_name(rs.getString("username"));
+                user1.setEmail(rs.getString("email"));
+                user1.setPassword(rs.getString("password"));
+                user1.setRoles(rs.getString("roles"));
+                users.add(user1);
+            }
+        } catch (SQLException e) {
+            System.out.println("Database error !"+e);
+        }
+        return users;
+    }
     public User getUserById(int id){
         ResultSet rs;
         User user=new User();
@@ -122,7 +148,7 @@ public class UserDao {
     public int userDelete(int id){
         int status = 0;
             Connection con= DBHelper.getInstance().getConnection();
-            String query="DELETE FROM users WHERE userId=?";
+            String query="DELETE FROM users WHERE id=?";
             try {
                 PreparedStatement ps=con.prepareStatement(query);
                 ps.setInt(1,id);

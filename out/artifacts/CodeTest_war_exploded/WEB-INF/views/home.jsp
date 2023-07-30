@@ -1,5 +1,5 @@
 <%@ page import="code.models.User" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
 
-                <p>User: <%=user.getUserId()%> <%=user.getName()%> Harry</p>
+                <p>User: <%=user.getUserId() +" "+ user.getName()%></p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >

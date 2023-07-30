@@ -1,16 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Lenovo
-  Date: 7/27/2023
-  Time: 11:25 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="code.models.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <jsp:include page="../fragments/header.jsp"/>
+    <%User user= (User)session.getAttribute("user");%>
     <title>User Update</title>
 </head>
 
@@ -22,11 +17,11 @@
                 <a href="/student/registration"><h3>Student Registration</h3></a>
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
+                <p>User: <%=user.getUserId() +" "+ user.getName()%></p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >
-                <input type="button" class="btn-basic" id="lgnout-button" value="Log Out" onclick="location.href='/'">
+                <input type="button" class="btn-primary" id="lgnout-button" value="Log Out" onclick="location.href='/'">
             </div>
         </div>
     </div>
@@ -47,7 +42,7 @@
     </div>
     <div class="main_contents">
         <div id="sub_content">
-            <form">
+            <form>
             <h2 class="col-md-6 offset-md-2 mb-5 mt-4">User Update</h2>
             <div class="row mb-4">
                 <div class="col-md-2"></div>

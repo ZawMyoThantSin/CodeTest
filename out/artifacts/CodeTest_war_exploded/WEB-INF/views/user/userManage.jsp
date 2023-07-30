@@ -1,3 +1,10 @@
+<%@ page import="code.models.User" %>
+<%@ page import="java.util.List" %>
+
+<%@ page import="code.daos.UserDao" %>
+<%@ page import="code.models.UserView" %>
+
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -5,6 +12,7 @@
 
 <head>
     <jsp:include page="../fragments/header.jsp"/>
+
 
     <title>User Management</title>
 </head>
@@ -17,7 +25,7 @@
                 <a href="/student/registration"><h3>Student Registration</h3></a>
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
+<%--                <p>User:</p>--%>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >
@@ -69,62 +77,30 @@
             <table class="table table-striped" id="stduentTable">
                 <thead>
                 <tr>
-
                     <th scope="col">User ID</th>
                     <th scope="col">User Name</th>
                     <th scope="col">Details</th>
-
                 </tr>
                 </thead>
                 <tbody>
+<%
+
+    List<User> users =new UserDao().getAllUser();
+    request.setAttribute("users",users);
+%>
+    <c:forEach items="${users}" var="usr" >
                 <tr>
-
-
-                    <td>USR001</td>
-                    <td>Harry</td>
-
+                    <td>${usr.getUserId()}</td>
+                    <td>${usr.getName()}</td>
                     <td>
-                        <button type="button" class="btn btn-success  " onclick="location.href = 'USR002.html';">
+                        <button type="button" class="btn btn-success  " onclick="location.href = '/user/update?userId=${usr.getId()}';">
                             Update
                         </button>
                     </td>
                     <td><button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal">Delete</button></td>
-
+                                data-bs-target="#exampleModal" onclick="location.href='/user/delete?userId=${usr.getId()}'">Delete</button></td>
                 </tr>
-
-                <tr>
-
-
-                    <td>USR002</td>
-                    <td>John</td>
-
-                    <td>
-
-                        <button type="button" class="btn btn-success  " onclick="location.href = 'USR002.html';">
-                            Update
-                        </button>
-                    </td>
-                    <td> <button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Delete</button></td>
-
-                </tr>
-
-                <tr>
-
-
-                    <td>USR003</td>
-                    <td>Bryce</td>
-
-                    <td>
-                        <button type="button" class="btn btn-success" onclick="location.href = 'USR002.html';">
-                            Update
-                        </button>
-                    </td>
-                    <td> <button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Delete</button></td>
-
-                </tr>
+    </c:forEach>
 
                 </tbody>
             </table>

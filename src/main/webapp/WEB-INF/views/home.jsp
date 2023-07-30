@@ -17,7 +17,7 @@
             </div>
             <div class="col-md-6">
 
-                <p>User: <%=user.getUserId()+" "+ user.getName()%></p>
+                <p>User: <%=user.getUserId() +" "+ user.getName()%></p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >

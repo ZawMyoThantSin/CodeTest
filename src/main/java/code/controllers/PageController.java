@@ -34,11 +34,10 @@ public class PageController {
                 session.setAttribute("user", user);
                 System.out.println(userRole);
                 return "home";
-            }else return "welcome";
-
-        } else {
+            }
+        } else
             model.addAttribute("message","User Name and Passsword is Invalid!");
             return "welcome";
-        }
+
     }
 }

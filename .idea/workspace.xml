@@ -6,32 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2eaaf72e-7324-4f35-9486-fc04ddf6e236" name="Default Changelist" comment="">
+    <list default="true" id="2eaaf72e-7324-4f35-9486-fc04ddf6e236" name="Default Changelist" comment="user login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/CourseRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/CourseRegistration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/daos/UserDao.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/courseRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/courseRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/user/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/user/userManage.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/user/userUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/user/userUpdate.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/CourseRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/CourseRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/PageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/Registration.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/daos/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentDetails.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userManage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/CourseRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/CourseRegistration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userUpdate.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userUpdate.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/PageController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/Registration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/code/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/daos/UserDao.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +71,7 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -197,7 +188,8 @@
       <workItem from="1690616438428" duration="4369000" />
       <workItem from="1690621844306" duration="1380000" />
       <workItem from="1690640538114" duration="7674000" />
-      <workItem from="1690680530919" duration="3463000" />
+      <workItem from="1690680530919" duration="5498000" />
+      <workItem from="1690692374433" duration="8877000" />
     </task>
     <task id="LOCAL-00001" summary="a little changes">
       <created>1690556651760</created>
@@ -234,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690645127477</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="some changes">
+      <created>1690684219305</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1690684219305</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -259,6 +258,18 @@
     <MESSAGE value="third commit" />
     <MESSAGE value="user create" />
     <MESSAGE value="user login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="user login page" />
+    <MESSAGE value="some changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="some changes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/code/daos/UserDao.java</url>
+          <line>130</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
