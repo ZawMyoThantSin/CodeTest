@@ -18,9 +18,12 @@ public class UserController {
     @PostMapping("/user/registration")
     public String userRegistration(@RequestParam String id,String name,String email,String password,String userRole){
         User user = new User(id,name,email,password,userRole);
-        new UserDao().userCreate(user);
-
-        return "user/userRegistration";
+        int status =new UserDao().userCreate(user);
+        if(status==1) {
+            return "home";
+        }else {
+            return "user/userRegistration";
+        }
     }
 
 

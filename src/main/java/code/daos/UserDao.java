@@ -29,22 +29,21 @@ public class UserDao {
         return status;
     }
 
-    public User isValidUser(String userId, String password) {
+    public User userValidate(String userId, String password) {
         Connection connection = DBHelper.getInstance().getConnection();
         String query = "SELECT * FROM users WHERE userId = ? AND password = ?";
         try (
-             PreparedStatement statement = connection.prepareStatement(query)) {
-            statement.setString(1, userId);
-            statement.setString(2, password);
-            try (ResultSet resultSet = statement.executeQuery()) {
-                if (resultSet.next()) {
+            PreparedStatement ps = connection.prepareStatement(query)) {
+            ps.setString(1, userId);
+            ps.setString(2, password);
+            try (ResultSet rs = ps.executeQuery()) {
+                if (rs.next()) {
                     User user = new User();
-                    user.setUserId(resultSet.getString("userId"));
-                    user.setName(resultSet.getString("username"));
-                    user.setEmail(resultSet.getString("email"));
-                    user.setPassword(resultSet.getString("password"));
-                    user.setRole(resultSet.getString("roles"));
-
+                    user.setUserId(rs.getString("userId"));
+                    user.setName(rs.getString("username"));
+                    user.setEmail(rs.getString("email"));
+                    user.setPassword(rs.getString("password"));
+                    user.setRole(rs.getString("roles"));
                     return user;
                 }
             }
@@ -52,7 +51,6 @@ public class UserDao {
             e.printStackTrace();
         }
         return null;
-
     }
 
     public List<User> getAllUser(){

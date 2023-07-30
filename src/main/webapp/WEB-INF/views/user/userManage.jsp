@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
@@ -69,20 +70,16 @@
             <table class="table table-striped" id="stduentTable">
                 <thead>
                 <tr>
-
                     <th scope="col">User ID</th>
                     <th scope="col">User Name</th>
                     <th scope="col">Details</th>
-
                 </tr>
                 </thead>
                 <tbody>
+
                 <tr>
-
-
                     <td>USR001</td>
                     <td>Harry</td>
-
                     <td>
                         <button type="button" class="btn btn-success  " onclick="location.href = 'USR002.html';">
                             Update
@@ -90,32 +87,13 @@
                     </td>
                     <td><button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
                                 data-bs-target="#exampleModal">Delete</button></td>
-
                 </tr>
 
-                <tr>
-
-
-                    <td>USR002</td>
-                    <td>John</td>
-
-                    <td>
-
-                        <button type="button" class="btn btn-success  " onclick="location.href = 'USR002.html';">
-                            Update
-                        </button>
-                    </td>
-                    <td> <button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                 data-bs-target="#exampleModal">Delete</button></td>
-
-                </tr>
 
                 <tr>
-
 
                     <td>USR003</td>
                     <td>Bryce</td>
-
                     <td>
                         <button type="button" class="btn btn-success" onclick="location.href = 'USR002.html';">
                             Update

@@ -11,21 +11,27 @@
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/PageController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/controllers/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/daos/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/classes/code/models/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/courseRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/courseRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentSearch.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentSearch.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/student/studentRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/out/artifacts/CodeTest_war_exploded/WEB-INF/views/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/CourseRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/CourseRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/PageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/PageController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/Registration.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/controllers/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/code/daos/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/daos/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/code/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/code/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/courseRegistration.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentSearch.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentSearch.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentDetails.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentRegistration.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/student/studentRegistration.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userManage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/user/userManage.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/welcome.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/CourseRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/CourseRegistration.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/PageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/PageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/Registration.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/code/controllers/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/controllers/UserController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/code/daos/UserDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/daos/UserDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/code/models/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/code/models/User.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -190,7 +196,8 @@
       <workItem from="1690605478929" duration="8629000" />
       <workItem from="1690616438428" duration="4369000" />
       <workItem from="1690621844306" duration="1380000" />
-      <workItem from="1690640538114" duration="3932000" />
+      <workItem from="1690640538114" duration="7674000" />
+      <workItem from="1690680530919" duration="3463000" />
     </task>
     <task id="LOCAL-00001" summary="a little changes">
       <created>1690556651760</created>
@@ -220,7 +227,14 @@
       <option name="project" value="LOCAL" />
       <updated>1690616668035</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="user login page">
+      <created>1690645127477</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690645127477</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -244,6 +258,7 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="third commit" />
     <MESSAGE value="user create" />
-    <option name="LAST_COMMIT_MESSAGE" value="user create" />
+    <MESSAGE value="user login page" />
+    <option name="LAST_COMMIT_MESSAGE" value="user login page" />
   </component>
 </project>

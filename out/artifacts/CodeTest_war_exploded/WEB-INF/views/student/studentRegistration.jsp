@@ -1,9 +1,10 @@
-
+<%@ page import="code.models.User" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <% User user = (User)session.getAttribute("user");%>
     <jsp:include page="../fragments/header.jsp"/>
     <title>Student Registration</title>
 </head>
@@ -16,7 +17,7 @@
 
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
+                <p>User: <%=user.getUserId()+" "+ user.getName()%></p>
                 <p>Current Date : ${date}</p>
             </div>
             <div class="col-md-1" >
