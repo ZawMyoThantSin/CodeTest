@@ -19,9 +19,9 @@ public class PageController {
     }
     @GetMapping("/login")
     public String loginPage(Model model){
-        if (!model.containsAttribute("message")) {
-            model.addAttribute("message", "");
-        }
+//        if (!model.containsAttribute("message")) {
+//            model.addAttribute("message", "");
+//        }
         return "welcome";
     }
 
@@ -34,7 +34,7 @@ public class PageController {
                 session.setAttribute("user", user);
                 System.out.println(userRole);
                 return "home";
-            }
+            }else return "home";
         } else
             model.addAttribute("message","User Name and Passsword is Invalid!");
             return "welcome";

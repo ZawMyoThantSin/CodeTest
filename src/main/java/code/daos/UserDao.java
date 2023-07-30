@@ -106,7 +106,7 @@ public class UserDao {
     public User getUserById(int id){
         ResultSet rs;
         User user=new User();
-        String query="SELECT * FROM user WHERE userId=?";
+        String query="SELECT * FROM users WHERE id=?";
         Connection con = DBHelper.getInstance().getConnection();
         try {
             PreparedStatement ps=con.prepareStatement(query);
@@ -116,7 +116,7 @@ public class UserDao {
 
                 user.setId(rs.getInt("id"));
                 user.setUserId(rs.getString("userId"));
-                user.setName(rs.getString("name"));
+                user.setName(rs.getString("username"));
                 user.setEmail(rs.getString("email"));
                 user.setPassword(rs.getString("password"));
                 user.setRole(rs.getString("roles"));
@@ -130,16 +130,17 @@ public class UserDao {
     public int updateUser(User user){
         int status=0;
         Connection con=DBHelper.getInstance().getConnection();
-        String query="UPDATE users SET name=?,email=?,password=?,roles=? WHERE userId=?";
+        String query="UPDATE users SET username=?,email=?,password=?,roles=? WHERE id=?";
         try {
             PreparedStatement ps=con.prepareStatement(query);
             ps.setString(1,user.getName());
             ps.setString(2,user.getEmail());
             ps.setString(3,user.getPassword());
             ps.setString(4,user.getRole());
+            ps.setInt(5,user.getId());
             status=ps.executeUpdate();
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.out.println("error"+e);
         }
 
         return status;

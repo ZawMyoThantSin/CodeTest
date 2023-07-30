@@ -5,7 +5,11 @@
 
 <head>
     <jsp:include page="../fragments/header.jsp"/>
-    <%User user= (User)session.getAttribute("user");%>
+    <%
+
+
+    %>
+
     <title>User Update</title>
 </head>
 
@@ -17,7 +21,7 @@
                 <a href="/student/registration"><h3>Student Registration</h3></a>
             </div>
             <div class="col-md-6">
-                <p>User: <%=user.getUserId() +" "+ user.getName()%></p>
+<%--                <p>User: <%=uservlue.getUserId() +" "+ uservlue.getName()%></p>--%>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >
@@ -42,27 +46,38 @@
     </div>
     <div class="main_contents">
         <div id="sub_content">
-            <form>
+            <form action="/user/update" method="post">
             <h2 class="col-md-6 offset-md-2 mb-5 mt-4">User Update</h2>
-            <div class="row mb-4">
+                <div> <input type="hidden"  id="hiddenid"  name="id" value="${user.id}"></div>
+                <div class="row mb-4">
+                    <div class="col-md-2"></div>
+                    <label for="userId" class="col-md-2 col-form-label">User Id</label>
+                    <div class="col-md-4">
+
+                        <input type="email" class="form-control" id="userId"  disabled="disabled" value="${user.userId}">
+                    </div>
+                </div>
+                <div class="row mb-4">
                 <div class="col-md-2"></div>
+
+
                 <label for="name" class="col-md-2 col-form-label">Name</label>
                 <div class="col-md-4">
-                    <input type="email" class="form-control" id="name" placeholder="Your Name...">
+                    <input type="text" class="form-control" id="name" name="name" value="${user.name}">
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="email" class="col-md-2 col-form-label">Email</label>
                 <div class="col-md-4">
-                    <input type="email" class="form-control" id="email" value="harry@gmail.com">
+                    <input type="email" class="form-control" id="email" name="email" value="${user.email}">
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="password" class="col-md-2 col-form-label">Passowrd</label>
                 <div class="col-md-4">
-                    <input type="password" class="form-control" id="password" required>
+                    <input type="password" class="form-control" id="password" name="password" value="${user.password}" required>
                 </div>
             </div>
             <div class="row mb-4">
@@ -78,9 +93,9 @@
                 <div class="col-md-2"></div>
                 <label for="userRole" class="col-md-2 col-form-label">User Role</label>
                 <div class="col-md-4">
-                    <select class="form-select" aria-label="Education" id="userRole">
-                        <option selected>Admin</option>
-                        <option value="1">User</option>
+                    <select class="form-select" aria-label="Education" id="userRole" name="userRole" >
+                        <option value="Admin">Admin</option>
+                        <option value="User">User</option>
                     </select>
                 </div>
             </div>

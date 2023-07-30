@@ -4,8 +4,8 @@
 <html lang="en">
 
 <head>
-    <% User user = (User)session.getAttribute("user");%>
     <jsp:include page="../fragments/header.jsp"/>
+    <% User user = (User)session.getAttribute("user");%>
     <title>Student Registration</title>
 </head>
 
@@ -42,28 +42,28 @@
     </div>
     <div class="main_contents">
         <div id="sub_content">
-            <form>
+            <form action="/student/registration" method="post">
 
             <h2 class="col-md-6 offset-md-2 mb-5 mt-4">Student Registration</h2>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="studentID" class="col-md-2 col-form-label">Student ID</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" value="STU001" id="studentID" disabled>
+                    <input type="text" class="form-control" placeholder="eg., STU001" name="studentId" id="studentID" >
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="name" class="col-md-2 col-form-label">Name</label>
                 <div class="col-md-4">
-                    <input type="text" class="form-control" id="name" value="Harry">
+                    <input type="text" class="form-control" id="name" name="name">
                 </div>
             </div>
             <div class="row mb-4">
                 <div class="col-md-2"></div>
                 <label for="dob" class="col-md-2 col-form-label">DOB</label>
                 <div class="col-md-4">
-                    <input type="date" class="form-control" id="dob">
+                    <input type="date" class="form-control" name="dob" id="dob">
                 </div>
             </div>
             <fieldset class="row mb-4">

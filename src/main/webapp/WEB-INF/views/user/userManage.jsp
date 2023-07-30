@@ -1,8 +1,9 @@
-<%@ page import="code.models.User" %>
+
 <%@ page import="java.util.List" %>
 
 <%@ page import="code.daos.UserDao" %>
-<%@ page import="code.models.UserView" %>
+
+<%@ page import="code.models.User" %>
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
@@ -84,21 +85,20 @@
                 </thead>
                 <tbody>
 <%
-
     List<User> users =new UserDao().getAllUser();
     request.setAttribute("users",users);
 %>
     <c:forEach items="${users}" var="usr" >
                 <tr>
-                    <td>${usr.getUserId()}</td>
-                    <td>${usr.getName()}</td>
+                    <td>${usr.userId}</td>
+                    <td>${usr.name}</td>
                     <td>
-                        <button type="button" class="btn btn-success  " onclick="location.href = '/user/update?userId=${usr.getId()}';">
+                        <button type="button" class="btn btn-success  " onclick="location.href = '/user/update?userid=${usr.id}';">
                             Update
                         </button>
                     </td>
                     <td><button type="submit" class="btn btn-secondary mb-3" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal" onclick="location.href='/user/delete?userId=${usr.getId()}'">Delete</button></td>
+                                data-bs-target="#exampleModal" onclick="location.href='/user/delete?userid=${usr.id}'">Delete</button></td>
                 </tr>
     </c:forEach>
 

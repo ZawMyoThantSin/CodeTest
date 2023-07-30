@@ -12,10 +12,17 @@ public class User {
         this.password = password;
         this.role = role;
     }
-
-    public User(int id, String userId, String name, String email, String password, String role) {
+//
+//    public User(int id, String userId, String name, String email, String password, String role) {
+//        this.id = id;
+//        this.userId = userId;
+//        this.name = name;
+//        this.email = email;
+//        this.password = password;
+//        this.role = role;
+//    }
+    public User(int id, String name, String email, String password, String role) {
         this.id = id;
-        this.userId = userId;
         this.name = name;
         this.email = email;
         this.password = password;

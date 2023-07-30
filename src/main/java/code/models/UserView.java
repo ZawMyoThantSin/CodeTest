@@ -4,8 +4,8 @@ public class UserView {
        private int id;
        private String user_id,user_name,email,password,roles;
 
-    public UserView(String user_id, String user_name, String email, String password, String roles) {
-        this.user_id = user_id;
+    public UserView(int id, String user_name, String email, String password, String roles) {
+        this.id =id;
         this.user_name = user_name;
         this.email = email;
         this.password = password;

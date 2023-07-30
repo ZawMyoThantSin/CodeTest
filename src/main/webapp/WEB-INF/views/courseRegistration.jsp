@@ -1,8 +1,10 @@
+<%@ page import="code.models.User" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <html>
 <head>
 <jsp:include page="fragments/header.jsp"/>
+    <% User user = (User)session.getAttribute("user");%>
     <title>Home</title>
 </head>
 <body>
@@ -13,7 +15,7 @@
                 <a href="/student/registration"><h3>Student Registration</h3></a>
             </div>
             <div class="col-md-6">
-                <p>User: USR001 Harry</p>
+                <p>User: <%= user.getUserId() +" "+user.getName()%></p>
                 <p>Current Date : ${date} </p>
             </div>
             <div class="col-md-1" >
